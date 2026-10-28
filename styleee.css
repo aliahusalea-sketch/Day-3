@@ -1,0 +1,405 @@
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --background: #fff7f7;
+  --pink: #f3cfc3;
+  --pink-light: #f8e1db;
+  --pink-heading: #e99a98;
+  --text: #242424;
+  --navy: #172235;
+  --gray: #565252;
+}
+
+body {
+  background: var(--background);
+  font-family: "Poppins", sans-serif;
+  color: var(--text);
+  padding: 0;
+}
+
+/* LAYOUT UTAMA */
+.resume {
+  width: 100%;
+  max-width: 1024px;
+  min-height: 1448px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  overflow: hidden;
+  position: relative;
+  background: var(--background);
+}
+
+/* KOLOM KIRI */
+.left-column {
+  background: var(--pink);
+  border-radius: 0 0 48px 48px;
+  margin: 0 0 54px 48px;
+  position: relative;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+}
+
+/* FOTO PROFIL */
+.profile-area {
+  height: 510px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.profile-circle {
+  position: absolute;
+  width: 430px;
+  height: 430px;
+  max-width: 100%;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #f8b4b0, #ee9299);
+  top: 50px;
+  left: 0;
+}
+
+.profile-photo {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 460px;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.profile-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  mix-blend-mode: normal;
+}
+
+/* JUDUL BAGIAN */
+.section-heading {
+  background: var(--pink-light);
+  border-radius: 0 60px 60px 0;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  padding: 14px 30px 14px 49px;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+/* KONTAK */
+.contact-section {
+  margin-top: 0;
+}
+
+.contact-list {
+  padding: 44px 28px 40px 54px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  min-height: 54px;
+  font-size: 18px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.contact-icon {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  border: 2px solid #111;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #111;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.email-icon {
+  background: #111;
+  color: white;
+  border-color: #111;
+  font-size: 23px;
+}
+
+.location-icon {
+  border: none;
+  font-size: 34px;
+}
+
+/* KEAHLIAN */
+.skills-section {
+  margin-top: 0;
+}
+
+.skills-list {
+  padding: 28px 20px 45px 80px;
+  list-style-type: disc;
+}
+
+.skills-list li {
+  padding-left: 0;
+  margin: 16px 0 27px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* KOLOM KANAN */
+.right-column {
+  padding: 48px 48px 35px;
+  min-width: 0;
+}
+
+/* PROFIL SINGKAT */
+.intro h1 {
+  font-size: 52px;
+  line-height: 1.45;
+  font-weight: 800;
+  letter-spacing: -1px;
+  color: var(--pink-heading);
+}
+
+.job-title {
+  color: var(--navy);
+  font-size: 29px;
+  font-weight: 400;
+  letter-spacing: 5px;
+  white-space: nowrap;
+  margin-top: 12px;
+}
+
+.horizontal-line {
+  height: 1px;
+  width: 100%;
+  background: #292929;
+  margin: 32px 0 30px;
+}
+
+.description {
+  color: var(--gray);
+  font-size: 13px;
+  line-height: 1.68;
+  text-align: justify;
+  margin-bottom: 30px;
+}
+
+/* PENDIDIKAN DAN PENGALAMAN */
+.content-section > .section-heading {
+  margin-bottom: 29px;
+  margin-left: 0;
+  padding-left: 49px;
+  border-radius: 50px 0 0 50px;
+  white-space: nowrap;
+  width: calc(100% + 48px);
+}
+
+.timeline-item {
+  margin-bottom: 15px;
+}
+
+.item-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 5px;
+  color: var(--navy);
+}
+
+.item-heading h3,
+.experience-item h3 {
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.item-heading span {
+  font-size: 16px;
+  font-weight: 500;
+  white-space: nowrap;
+  color: var(--navy);
+}
+
+.timeline-item h4 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: var(--navy);
+}
+
+.timeline-item p,
+.experience-item p {
+  font-size: 13px;
+  color: var(--gray);
+  line-height: 1.7;
+  text-align: justify;
+}
+
+/* PENGALAMAN */
+.experience-section {
+  margin-top: 30px;
+}
+
+.experience-section > .section-heading {
+  margin-bottom: 29px;
+}
+
+.experience-item {
+  margin-bottom: 14px;
+}
+
+.experience-item h3 {
+  margin-bottom: 4px;
+}
+
+.experience-item h4 {
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 5px;
+  color: var(--navy);
+}
+
+/* RESPONSIVE TABLET DAN HP */
+@media (max-width: 760px) {
+  .resume {
+    max-width: 100%;
+    min-height: auto;
+    grid-template-columns: 1fr;
+  }
+
+  .left-column {
+    margin: 0 20px;
+    border-radius: 0 0 35px 35px;
+  }
+
+  .profile-area {
+    height: 400px;
+  }
+
+  .profile-circle {
+    width: min(360px, 90%);
+    height: auto;
+    aspect-ratio: 1;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 30px;
+  }
+
+  .profile-photo {
+    height: 370px;
+  }
+
+  .section-heading {
+    min-height: 68px;
+    font-size: 29px;
+    padding-left: 30px;
+  }
+
+  .contact-list {
+    padding: 30px;
+  }
+
+  .contact-item {
+    gap: 18px;
+    font-size: 15px;
+  }
+
+  .skills-list {
+    padding: 20px 25px 25px 55px;
+  }
+
+  .skills-list li {
+    font-size: 16px;
+    margin: 14px 0 20px;
+  }
+
+  .right-column {
+    padding: 40px 28px;
+  }
+
+  .intro h1 {
+    font-size: clamp(38px, 9vw, 52px);
+    line-height: 1.25;
+  }
+
+  .job-title {
+    font-size: clamp(16px, 4vw, 25px);
+    letter-spacing: 3px;
+    white-space: normal;
+  }
+
+  .description {
+    font-size: 13px;
+  }
+
+  .content-section > .section-heading {
+    width: 100%;
+    border-radius: 50px;
+    padding-left: 28px;
+    font-size: 27px;
+  }
+
+  .item-heading h3,
+  .experience-item h3 {
+    font-size: 15px;
+  }
+}
+
+/* HP KECIL */
+@media (max-width: 380px) {
+  .left-column {
+    margin: 0 12px;
+  }
+
+  .right-column {
+    padding: 32px 18px;
+  }
+
+  .contact-list {
+    padding: 24px 18px;
+  }
+
+  .contact-item {
+    gap: 12px;
+    font-size: 13px;
+  }
+
+  .contact-icon {
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+  }
+
+  .section-heading {
+    font-size: 25px;
+  }
+
+  .item-heading {
+    gap: 5px;
+  }
+
+  .item-heading h3,
+  .item-heading span {
+    font-size: 13px;
+  }
+}

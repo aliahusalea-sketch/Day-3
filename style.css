@@ -1,0 +1,39 @@
+h1 {
+        color: #5d21e0;
+        font-size: 28px;
+    } 
+        h2 {
+        color: #d592f9;
+        font-size: 20px;
+    }
+button {
+    background-color: #e02121;
+    color: rgb(244, 243, 249);
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+}
+button:hover {
+    background-color: #119e49;
+    color: rgb(241, 240, 245);
+}
+.judul {
+    color: #2563eb;
+}
+
+#btn-simpan {
+    background-color: green;
+    color: white;
+}
+.navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+
+}
+.navbar nav {
+    display: flex;
+    gap: 16px;
+}
